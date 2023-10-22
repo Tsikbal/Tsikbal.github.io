@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset = "UTF-8"/>
+	<meta name = "descripción" content= "Página para el Laboratorio de Óptica de la Facultad de Ciencias, UNAM"/>
+	<meta name = "robots" content = "index, follow"/>
+	<title>Laboratorio de Óptica</title>
+	<meta name = "viewport" content = "width=device-width, inictial-scale=1.0">
+	<link rel="stylesheet" href= "C:Users/dorit/Documents/optica/Página/CSS/index.css">
+</head>
+
+<body>
+	<header class = "EncabezadoP">
+		<nav class = "MenuP">
+			<ul class = "Menu_Desplegable">
+				<li class = "Menu_Opciones"><a href = "C:Users/dorit/Documents/optica/Página/index.html" class="menu_link">Principal</a>
+				</li>
+				<li class = "Menu_Opciones Menu_Opciones_Desp"><a href = "#" class="menu_link">Curso<img src="C:Users/dorit/Documents/optica/Página/IMG/arrow.svg" class="menu__arrow"></a>
+					<ul class = "Menu_Desplegable_Interno">
+						<li class = "Menu_Opciones_Interno"><a href = "#" class="menu_link menu_link_interno">Evaluación</a>
+						</li>
+						<li class = "Menu_Opciones_Interno"><a href = "#" class="menu_link menu_link_interno">Calendario</a>
+						</li>
+						<li class = "Menu_Opciones_Interno"><a href = "#" class="menu_link menu_link_interno">Normas</a>
+						</li>
+					</ul>
+				</li>
+				<li class = "Menu_Opciones"><a href = "Manuales.html" class="menu_link">Manuales</a></li>
+				<li class = "Menu_Opciones"><a href = "#" class="menu_link">Vídeos</a></li>
+				<li class = "Menu_Opciones"><a href = "#" class="menu_link">Vínculos</a></li>
+				<li class = "Menu_Opciones"><a href = "#" class="menu_link">Simulaciones</a></li>
+			</ul>
+			<hr class= "hrP">
+		</nav>
+		
+		<figure class = "menu_menor">
+			<img src = "C:Users/dorit/Documents/optica/Página/IMG/menu.svg" class = "menu_img">
+		</figure>
+	</header>
+
+	<main class = "PrincipalP">
+		<section class = "Cuerpo_1">
+		<p style = "text-align: center; font-size: 18px;" >Ingresa tus datos dejando un espacio entre estos. En caso de que los arreglos de Posición y
+			Voltaje sean de diferente longitud se mandará una alerta. Dar click en cargar para mostrar el resultado y la gráfica en la parte inferior:</p>
+			
+		<form id = "Datos">
+			<ul>
+				<li>
+					<label>Tipo de fuente</label>
+					<input type= "text" id = "Tit" name="Titulo"/>
+				</li>
+				<li>
+					<label for= "Pos">Posición (mm):</label>
+					<input type= "text" id = "Pos" name="Pos_Rad"/>
+				</li>
+				<li>
+					<label for= "Vol">Voltaje (V):</label>
+					<input type= "text" id = "Vol" name="Vol_Rad"/>
+				</li>
+			</ul>
+		</form>
+		
+		<div class = "Botonc"><input type="button" onclick="LinRadiometria()" value="Cargar" class = "Boton"></div>
+		
+		<table class = "Inf" border = "1">
+			<caption style = "padding: 5px; background-color: white;">Resultados</caption>
+			<tr style = "background-color: white;">
+				<th>m</th>
+				<th>b</th>
+				<th>R^2</th>
+			</tr>
+			<tbody id="ValoresTab" style = "background-color: white;">
+				
+			</tbody>
+			</table>
+			
+		<div style = "text-align: center;"><canvas id="GrCanvas" style="border:1px solid grey; background-color: white;"></canvas></div>
+			
+		</section>
+		
+		<aside class = "Cuerpo_2">
+		<h1 class = "aside" >Complementos</h1>
+			<ul>
+				<li>Análisis de datos
+				</li>
+				<li>Vídeo
+				</li>
+			</ul>
+		<h1 class = "aside" >Temas relacionados</h1>
+			<ul>
+				<li>Ley coseno de Lambert
+				</li>
+				<li>Vídeo
+				</li>
+			</ul>
+		
+		</aside>	
+	</main>
+	
+	<footer class="PPag">
+		<p>Laboratorio de Óptica, Facultad de Ciencias, UNAM.</p>
+		<p>Erick Barrios Barocio</p>
+		<p>Ramírez Arvídez Roxette</p>
+	</footer>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],"HTML-CSS": { preferredFont: 
+    "TeX", availableFonts: ["STIX","TeX"] },tex2jax: 
+    { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: 
+    [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, 
+    ignoreClass: "tex2jax_ignore|dno" },TeX: { noUndefined: 
+    { attributes: { mathcolor: "red", mathbackground: 
+     "#FFEEEE", mathsize: "80%" } } },messageStyle: "none"
+    });
+</script>
+   
+<script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+	<script src = "C:Users/dorit/Documents/optica/Página/JS/PruebaRad.js"></script>
+	<script src = "JS/Menu_800px.js"></script>
+	<script src = "C:Users/dorit/Documents/optica/Página/JS/Generico.js"></script>
+	<noscript>
+	El navegador no es compatible con los script: actualizar el navegador o utilizar uno diferente.
+	</noscript>
+</body>
+
+</html>
