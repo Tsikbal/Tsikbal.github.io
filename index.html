@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset = "UTF-8"/>
+	<meta name = "descripción" content= "Divulgación de la Física"/>
+	<meta name = "robots" content = "index, follow"/>
+	<title>Tsikbal</title>
+	<link rel = "shortcut icon" href = "Icono.ico" type = "image/x-icon" />
+	<meta name = "viewport" content = "width=device-width, inictial-scale=1.0">
+	<link rel="stylesheet" href= "CSS/index - copia.css"> <!--CambiarRuta-->
+	
+	<link href = "https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet"> 
+</head>
+<body>
+	<header class = "Encabezado">
+		<figure class= "LOGO">
+			<img src="IMG/LOG2.png" class="LOGO_img"> <!--CambiarRuta-->
+		</figure>
+		
+		<nav class = "Menu">
+			<ul class = "Menu_Desplegable Menu_Des_Desp">
+				<li class = "Menu_Opciones"><a href = "index.html" class="menu_link">Principal</a><!--CambiarRuta-->
+				</li>
+				<li class = "Menu_Opciones Menu_Opciones_Desp"><a href = "#" class="menu_link">Óptica<img src="IMG/arrow.svg" class="menu__arrow"></a>
+					<ul class = "Menu_Desplegable_Interno">
+						<li class = "Menu_Opciones_Interno"><a href = "Lecturas/Optica/Optica_Geo.html" class="menu_link menu_link_interno">Geométrica</a><!--CambiarRuta-->
+						</li>
+						<li class = "Menu_Opciones_Interno"><a href = "#" class="menu_link menu_link_interno">Física</a>
+						</li>
+						<li class = "Menu_Opciones_Interno"><a href = "#" class="menu_link menu_link_interno">Otro</a>
+						</li>
+					</ul>
+				</li>
+				<li class = "Menu_Opciones"><a href = "#" class="menu_link">Electrónica</a></li>
+				<li class = "Menu_Opciones"><a href = "#" class="menu_link">Vínculos</a></li>
+				<li class = "Menu_Opciones"><a href = "#" class="menu_link">Contacto</a></li>
+			</ul>
+			<hr>
+		</nav>
+		
+		<figure class = "menu_menor">
+			<img src = "IMG/bx-menu.svg" class = "menu_img"> <!--CambiarRuta-->
+		</figure>
+	</header>
+
+	<main class = "Principal">
+		
+	<section class = "Galeria_superior">
+		<div class="B_Izq"><i class='bx bx-chevron-left'></i></div>
+		<div class="B_Der"><i class='bx bx-chevron-right'></i></div>
+		<section class="Carousell">
+			<div class = "Caja">
+				<h3>Anillos de Newton</h3>
+				<a href = "#"><img src="IMG/Carousell/Anillos.jpg"></a> <!--CambiarRuta-->
+			</div>
+			<div class = "Caja">
+				<h3>Anillos de Newton</h3>
+				<img src="IMG/Carousell/Newton.jpg"><!--CambiarRuta-->
+			</div>
+			<div class = "Caja">
+				<h3>Navaja de Focault</h3>
+				<img src="IMG/Carousell/Navaja_Focault.jpg"><!--CambiarRuta-->
+			</div>
+			<div class = "Caja">
+				<h3>Anillos de Newton</h3>
+				<img src="IMG/Carousell/Navaja_Focault.jpg"><!--CambiarRuta-->
+			</div>
+			<div class = "Caja">
+				<h3>Anillos de Newton</h3>
+				<img src="IMG/Carousell/Navaja_Focault.jpg"><!--CambiarRuta-->
+			</div>
+		</section>
+		</section>
+	<section style = "margin:0px 10% 100px 10%;font-family: 'Dosis', sans-serif; font-size: 20px; color: #adae92;text-align: center;">
+	<p>Este sitio web es una iniciativa para compartir saberes de la Física que han sido desarrollados durante siglos, con la intención de que cada uno de nosotros pueda ponerlos en práctica y discusión con los recursos a su alcance. Motivando así, el continuo aprendizaje y curiosidad.
+		En el menú superior están seccionados los proyectos, al ingresar a un tema encontrarás una lista de fichas acompañadas de una breve descripción, podrás acceder a la página correspondiente dando click. 
+		En cada página encontrarás un archivo pdf que podrás leer y estudiar en el mismo sitio. Los textos incluyen la teoría necesaria para entender el tema, y sugerencias de materiales que te permitirán poner en práctica lo estudiado. De ser necesario puedes consultar el menú lateral con temas relacionados o la bibliografía indicada en el texto.
+		En algunos de los proyectos se brindan suplementos, como material audiovisual o una interfaz para analizar los datos que recabes en tu experiencia práctica. 
+		En la parte inferior de la página se dispone un foro de comentarios en el que podrás discutir y aportar ideas.</p>
+	</section>
+	</main>
+	
+	<footer class="PPag">
+		<div class ="Text_PP">
+			<p>Tsikbal</p>
+		</div>
+		
+		<div class = "Redes">
+			<a href ="./" class = "Redes-icon"><i class='bx bxl-youtube'></i></a>
+			<a href ="./" class = "Redes-icon"><i class='bx bxl-instagram' ></i></a>
+		</div>
+	</footer>
+	<script src = "JS/Menu_800px.js"></script>
+	<script>
+	var BotIzq = document.querySelector(".B_Izq"),
+	BotDer = document.querySelector(".B_Der"),
+	Deslizar =  document.querySelector(".Carousell"),
+	DeslCaja = document.querySelectorAll(".Caja");
+	
+	BotIzq.addEventListener("click", e =>MovIzq())
+	BotDer.addEventListener("click", e =>MovDer())
+	
+	setInterval(()=>{
+	MovDer()	
+	}, 5000
+	);
+	
+	let operacion=0, contador = 0, widthImg = 100/DeslCaja.length;
+	
+	function MovDer(){
+		if (contador >= DeslCaja.length-1){
+			contador=0;
+			operacion=0;
+			Deslizar.style.transform = `translate(-${operacion}%)`;
+			Deslizar.style.transition = "none";
+			return;
+		}
+		else{
+			contador++;
+			operacion +=widthImg;
+			Deslizar.style.transform = `translate(-${operacion}%)`;
+			Deslizar.style.transition = "all ease .6s";
+		}
+	}
+	
+	function MovIzq(){
+		if (contador<0){
+			contador = DeslCaja.length-1;
+			operacion = widthImg*(DeslCaja.length-1);
+			Deslizar.style.transform = `translate(-${operacion}%)`;
+			Deslizar.style.transition = "none";
+			return;
+		}
+		else{
+			contador--;
+			operacion -= widthImg;
+			Deslizar.style.transform = `translate(-${operacion}%)`;
+			Deslizar.style.transition = "all ease .6s";
+		}
+	}
+	</script>
+	<noscript>
+	El navegador no es compatible con los script: actualizar el navegador o utilizar uno diferente.
+	</noscript>
+</body>
+
+</html>
