@@ -49,14 +49,15 @@ header{
 
 
 .LOGO{
-	width:80%;
+	/*width:80%;*/
 	height: 180px;
 	padding: 0;
-	margin:0 10%;
+	/*margin:0 10%;*/
 	position: absolute;
 	background-image: url(C:Users/dorit/Documents/optica/Página/IMG/header.jpg); /*CambiarRuta*/
 	background-size: cover;
-
+	display: flex;
+        justify-content: left;
 }
 
 .LOGO_img{
