@@ -14,7 +14,9 @@ header{
     color: #fff;
 	width: 100%;
 	z-index: 3;
-	background-image: url(IMG/Lentes.jpg);
+	background-image: url(../IMG/Lentes.jpg);
+        background-position-y: 60%;
+        background-size: cover;
 }
 
 .Encabezado{
