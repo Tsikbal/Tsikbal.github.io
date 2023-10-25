@@ -17,7 +17,7 @@ header{
 }
 
 .Encabezado{
-    height: 180px;
+    height: 110px;
 }
 
 .EncabezadoP{ 
@@ -52,7 +52,7 @@ header{
 	/*width:80%;*/
 	height: 180px;
 	padding: 0;
-	/*margin:0 10%;*/
+	margin:0 1%;
 	position: absolute;
 	background-image: url(C:Users/dorit/Documents/optica/Página/IMG/header.jpg); /*CambiarRuta*/
 	background-size: cover;
@@ -83,7 +83,7 @@ nav{
 }
 
 .Menu_Lect{
-	top: 200px;
+	top: 30px;
 	position: absolute;
 }
 
@@ -116,8 +116,8 @@ nav{
 
 hr{
 	height: 5px;
-	width:45%;
-	background-color: #000;
+	width:80%;
+	background-color: #fb0202;
 	margin-top: 30px;
 	position:absolute;
 	}
