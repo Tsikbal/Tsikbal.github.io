@@ -60,8 +60,8 @@ header{
 }
 
 .LOGO_img{
-	width:50%;
-	height:110px;
+	width:auto;
+	height:50%;
 	margin: 10px auto;
 	display: flex;
 	align-items: center;
