@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset = "UTF-8"/>
+	<meta name = "descripción" content= "Divulgación de la Física, Tsikbal"/>
+	<meta name = "robots" content = "index, follow, Tsikbal"/>
+	<title>Tsikbal</title>
+	<link rel = "shortcut icon" href = "Icono.ico" type = "image/x-icon" />
+	<meta name = "viewport" content = "width=device-width, inictial-scale=1.0">
+	<link rel="stylesheet" href= "CSS/index.css"> <!--CambiarRuta-->
+	
+	<link href = "https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet"> 
+</head>
+<body>
+	<header class = "Encabezado">
+		<figure class= "LOGO">
+			<img src="IMG/Tskbal naat.jpg" class="LOGO_img"> <!--CambiarRuta-->
+		</figure>
+		
+		<nav class = "Menu">
+			<ul class = "Menu_Desplegable Menu_Des_Desp">
+				<li class = "Menu_Opciones"><a href = "index.html" class="menu_link">Principal</a><!--CambiarRuta-->
+				</li>
+				<li class = "Menu_Opciones Menu_Opciones_Desp"><a href = "Páginas/Áreas.html" class="menu_link">Áreas</a>
+				</li>
+				<li class = "Menu_Opciones"><a href = "#" class="menu_link">Galeria</a></li>
+				<li class = "Menu_Opciones"><a href = "#" class="menu_link">Vínculos</a></li>
+				<li class = "Menu_Opciones"><a href = "#" class="menu_link">Contacto</a></li>
+			</ul>
+			<hr>
+		</nav>
+		
+		<figure class = "menu_menor">
+			<img src = "IMG/bx-menu.svg" class = "menu_img"> <!--CambiarRuta-->
+		</figure>
+	</header>
+
+	<main class = "Principal">
+		
+	<section class = "Galeria_superior">
+		<div class="B_Izq"><i class='bx bx-chevron-left'></i></div>
+		<div class="B_Der"><i class='bx bx-chevron-right'></i></div>
+		<section class="Carousell">
+			<div class = "Caja">
+				<h3>Anillos de Newton</h3>
+				<a href = "#"><img src="IMG/Carousell/Anillos.jpg"></a> <!--CambiarRuta-->
+			</div>
+			<div class = "Caja">
+				<h3>Anillos de Newton</h3>
+				<img src="IMG/Carousell/Newton.jpg"><!--CambiarRuta-->
+			</div>
+			<div class = "Caja">
+				<h3>Navaja de Focault</h3>
+				<img src="IMG/Carousell/Navaja_Focault.jpg"><!--CambiarRuta-->
+			</div>
+			<div class = "Caja">
+				<h3>Anillos de Newton</h3>
+				<img src="IMG/Carousell/Navaja_Focault.jpg"><!--CambiarRuta-->
+			</div>
+			<div class = "Caja">
+				<h3>Anillos de Newton</h3>
+				<img src="IMG/Carousell/Navaja_Focault.jpg"><!--CambiarRuta-->
+			</div>
+		</section>
+		</section>
+	<section style = "margin:0px 10% 100px 10%;font-family: 'Dosis', sans-serif; font-size: 20px; color: #adae92;text-align: center;">
+	<p>Este sitio es una iniciativa para compartir saberes de la Ciencia que han sido de nuestro iteres, con la intención de motivar el continuo 
+	   aprendizaje y curiosidad. En el menú superior están seccionados los proyectos que hemos abordado a lo largo de varios años, al ingresar 
+	   a un área encontrarás una lista de temas acompañadas de una breve descripción, podrás acceder al texto correspondiente dando click. 
+	</p>
+	</section>
+	</main>
+	
+	<footer class="PPag">
+		<div class ="Text_PP">
+			<p>Tsikbal</p>
+		</div>
+		
+		<div class = "Redes">
+			<a href ="./" class = "Redes-icon"><i class='bx bxl-youtube'></i></a>
+			<a href ="./" class = "Redes-icon"><i class='bx bxl-instagram' ></i></a>
+		</div>
+	</footer>
+	<script src = "JS/Menu_800px.js"></script>
+	<script>
+	var BotIzq = document.querySelector(".B_Izq"),
+	BotDer = document.querySelector(".B_Der"),
+	Deslizar =  document.querySelector(".Carousell"),
+	DeslCaja = document.querySelectorAll(".Caja");
+	
+	BotIzq.addEventListener("click", e =>MovIzq())
+	BotDer.addEventListener("click", e =>MovDer())
+	
+	setInterval(()=>{
+	MovDer()	
+	}, 5000
+	);
+	
+	let operacion=0, contador = 0, widthImg = 100/DeslCaja.length;
+	
+	function MovDer(){
+		if (contador >= DeslCaja.length-1){
+			contador=0;
+			operacion=0;
+			Deslizar.style.transform = `translate(-${operacion}%)`;
+			Deslizar.style.transition = "none";
+			return;
+		}
+		else{
+			contador++;
+			operacion +=widthImg;
+			Deslizar.style.transform = `translate(-${operacion}%)`;
+			Deslizar.style.transition = "all ease .6s";
+		}
+	}
+	
+	function MovIzq(){
+		if (contador<0){
+			contador = DeslCaja.length-1;
+			operacion = widthImg*(DeslCaja.length-1);
+			Deslizar.style.transform = `translate(-${operacion}%)`;
+			Deslizar.style.transition = "none";
+			return;
+		}
+		else{
+			contador--;
+			operacion -= widthImg;
+			Deslizar.style.transform = `translate(-${operacion}%)`;
+			Deslizar.style.transition = "all ease .6s";
+		}
+	}
+	</script>
+	<noscript>
+	El navegador no es compatible con los script: actualizar el navegador o utilizar uno diferente.
+	</noscript>
+</body>
+
+</html>
