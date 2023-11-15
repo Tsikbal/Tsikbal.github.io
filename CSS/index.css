@@ -343,6 +343,10 @@ main{
 .sub-Menu-Txt{
 	position: absolute;
 	font-size: 35px;
+	width: 10%;
+	justify-content: center;
+	text-align:center;
+	display: flex;
 }
 
 
