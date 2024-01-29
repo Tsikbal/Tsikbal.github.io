@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset = "UTF-8"/>
+	<meta name = "descripción" content= "Página de divulgación de Ciencia"/>
+	<meta name = "robots" content = "index, follow"/>
+	<title>Tsikbal Naat: Radiometría</title>
+	<meta name = "viewport" content = "width=device-width, inictial-scale=1.0">
+	<link rel="stylesheet" href= "../../../../../CSS/index.css">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+
+<body>
+	<header class = "Encabezado_Rad" style = "height: 150px;">
+		<nav class = "Menu_Lect">
+			<ul class = "Menu_Desplegable Menu_Des_Desp">
+				<li class = "Menu_Opciones"><a href = "../../../../../index.html" class="menu_link">Principal</a><!--CambiarRuta-->
+				</li>
+				<li class = "Menu_Opciones Menu_Opciones_Desp"><a href = "../../../../Áreas.html" class="menu_link">Áreas</a>
+				</li>
+				<li class = "Menu_Opciones"><a href = "../../../../Galeria.html" class="menu_link">Galeria</a></li>
+				<li class = "Menu_Opciones"><a href = "../../../../Vínculos.html" class="menu_link">Vínculos</a></li>
+				<li class = "Menu_Opciones"><a href = "../../../../Contacto.html" class="menu_link">Contacto</a></li>
+			</ul>
+			<hr class= "hrP">
+		</nav>
+		
+		<figure class = "menu_menor">
+			<img src = "../IMG/menu.svg" class = "menu_img">
+		</figure>
+	</header>
+
+	<main class = "PrincipalP">
+		<section class = "Cuerpo_1">
+		<p style = "text-align: center; font-size: 18px;" >Instrucciones </p>
+		<p style = "text-align: justify;" >Ingresa tus datos dejando un espacio entre estos. En caso de que los arreglos de Distancia e Irradiancia
+		sean de diferente longitud se mandará una alerta, da click en Aceptar y verifica los datos que ingresaste. </p>
+		<p style = "text-align: justify;" >Para obtener la grafica linealizada de intensidad respecto a la distancia rellena las primeras dos entradas ("Distancia" e "Intensidad LED"), independientemente de la fuente de luz usada. 
+		Da click en el botón <b>"Linealización"</b> para mostrar el resultado en las tablas y la gráfica en la parte inferior:</p>
+		<p style = "text-align: justify;" >Si quieres ver las graficas de dos diferentes fuentes de luz, es necesario que para ambas se usarán las mismas posiciones de Distancia, rellena esa columna. En la segunda y
+		tercer entrada ingresa las intensidades medidas para cada fuente</p>
+		<p style = "text-align: justify;" >Da click en el botón <b>"Normalizadas"</b> para mostrar el resultado en las tablas y la gráfica simultánea en la parte inferior:</p>
+		<p style = "text-align: justify;" >Puedes agregar las incertidumbres de ambos ejes agregando la información correspondiente.</p>
+		
+		<form id = "Datos">
+			<ul>
+				<li>
+					<label for= "EjeX">Distancia ($mm$):</label>
+					<input type= "text" id = "EjeX" name="EjeX"/>
+				</li>
+				<li>
+					<label for= "EjeY">Intensidad LED ($\frac{mW}{m^2}$):</label>
+					<input type= "text" id = "EjeY" name="EjeY"/>
+				</li>
+				<li>
+					<label for= "EjeY_2">Intensidad láser($\frac{mW}{m^2}$):</label>
+					<input type= "text" id = "EjeY_2" name="EjeY_2"/>
+				</li>
+			</ul>
+		</form>
+		<form id = "Datos">
+			<ul>
+				<li>
+					<label for= "D_X">$\Delta D$ ($mm$):</label>
+					<input type= "text" id = "D_X" name="D_X" style="width: 100px;"/>
+				</li>
+				<li>
+					<label for= "D_Y">$\Delta I$ ($\frac{mW}{m^2}$):</label>
+					<input type= "text" id = "D_Y" name="D_Y" style="width: 100px;"/>
+				</li>
+				<li>
+					<label for= "D_Y_2">$\Delta I$ ($\frac{mW}{m^2}$):</label>
+					<input type= "text" id = "D_Y_2" name="D_Y_2" style="width: 100px;"/>
+				</li>
+			</ul>
+		</form>
+		<div class = "Botonc"><input type="button" onclick="LinRadiometria()" value="Linealización" class = "Boton">
+		<input type="button" onclick="NormRadiometria()" value="Normalizadas" class = "Boton"></div>
+		
+		<table class = "Inf" border = "1">
+			<caption style = "padding: 5px; background-color: white;">Resultados</caption>
+			<tr style = "background-color: white;">
+				<th>m</th>
+				<th>b</th>
+				<th>R^2</th>
+				<th>Δm</th>
+				<th>Δb</th>
+			</tr>
+			<tbody id="ValoresTab" style = "background-color: white;">
+				
+			</tbody>
+		</table>
+		
+		
+		<div id="chartContainer" style="height: 500px; width: 100%;"></div>
+		
+		</section>
+
+		<aside class = "Cuerpo_2">
+		<h1 class = "aside" >Complementos</h1>
+			<ul>
+				<li><a style="color: snow;" href = "Radiometria.html">Teoría</a>				
+				</li>
+				<li><a href = "https://youtu.be/94skLGhj91U" target="_blank">Vídeo de Youtube</a>
+				</li>
+			</ul>
+		<h1 class = "aside" >Temas relacionados</h1>
+			<ul>
+				<li>
+				</li>
+			</ul>
+		
+		</aside>	
+	</main>
+	
+	<footer class="PPag">
+		<div class ="Text_PP">
+			Tsikbal Naat <br />
+			Erick Barrios<br />
+			Roxette Arvídez
+		</div>
+		
+		<div class = "Redes">
+			<a href ="https://youtube.com/@TsikbalNaat?si=plkLdA8T7rxn5Sbh" class = "Redes-icon"><i class='bx bxl-youtube'></i></a>
+			<a href ="./" class = "Redes-icon"><i class='bx bxl-instagram' ></i></a>
+		</div>
+	</footer>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],"HTML-CSS": { preferredFont: 
+    "TeX", availableFonts: ["STIX","TeX"] },tex2jax: 
+    { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: 
+    [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, 
+    ignoreClass: "tex2jax_ignore|dno" },TeX: { noUndefined: 
+    { attributes: { mathcolor: "red", mathbackground: 
+     "#FFEEEE", mathsize: "80%" } } },messageStyle: "none"
+    });
+	</script>
+   
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+	<script src = "../../../../../JS/Analisis.js"></script>
+	<script src = "../../../../../JS/Menu_800px.js"></script>
+	<script type="text/javascript">
+
+	function LinRadiometria(){
+		let EjeX = 0, EjeY = 0, D_X = 0, D_Y = 0;
+			LXs = [], LYs = [], X_L_D = [], X_R_D = [], Y_U_D = [], Y_D_D = [],
+			dataPointss = [], dataPoints_E = [], dataPoints_Med = [];
+		let Suma = 0;
+		EjeX = document.getElementById("EjeX").value,
+		D_X =document.getElementById("D_X").value,
+		EjeY = document.getElementById("EjeY").value,
+		D_Y =document.getElementById("D_Y").value;
+		let EjeXCad = EjeX.split(" "), EjeYCad = EjeY.split(" "), EjeDXCad = D_X.split(" "), EjeDYCad = D_Y.split(" "),
+			Xss = new Array(EjeXCad.length), Yss = new Array(EjeYCad.length),
+			DXss = new Array(EjeDXCad.length), DYss = new Array(EjeDYCad.length);
+		for(var i=0; i < EjeXCad.length; i++){
+			Xss[i]=parseFloat(EjeXCad[i]);
+			Yss[i]=parseFloat(EjeYCad[i]);
+			DXss[i]=parseFloat(EjeDXCad[i]);
+			DYss[i]=parseFloat(EjeDYCad[i]);
+		}
+	
+			if (EjeX == 0 || EjeY == 0){
+				return alert("Las cadenas están vacías");
+			}
+			if (EjeXCad.length != EjeYCad.length){
+				return alert("Las cadenas Tienen diferente longitud");
+			}
+	
+		for(var i = 0; i< Xss.length; i++){
+			LXs.push(Math.log10(Xss[i]));
+			LYs.push(Math.log10(Yss[i]));
+			X_L_D.push(LXs[i] - DXss[i]/Xss[i]);
+			X_R_D.push(LXs[i] + DXss[i]/Xss[i]);
+			Y_U_D.push(LYs[i] + DYss[i]/Yss[i]);
+			Y_D_D.push(LYs[i] - DYss[i]/Yss[i]);
+			}
+		
+		LineLS(LXs, LYs);
+		
+		for(var i = 0; i< Xss.length; i++){
+			dataPointss.push({
+				x: LXs[i], y: FinalYs[i]
+				});
+			dataPoints_Med.push({
+				x: LXs[i], y: LYs[i]
+				});
+			dataPoints_E.push({type: "line", markerType:"cross",markerSize:5, lineDashType: "dot",lineColor: "red",
+				dataPoints: [{x: X_L_D[i], y: LYs[i], color: "Red"},{x: X_R_D[i], y: LYs[i], color: "Red"} ]
+			});
+			dataPoints_E.push({type: "line", markerType:"cross",markerSize:5, lineDashType: "dot",lineColor: "red",
+				dataPoints: [{x: LXs[i], y: Y_U_D[i], color: "Red"},{x: LXs[i], y: Y_D_D[i], color: "Red"} ]
+			})
+			};
+		dataPoints_E.push({
+		type: "line", markerType:"none", lineDashType: "dash", lineColor: "blue",
+			dataPoints: dataPointss
+		}, {type: "scatter",markerColor: "red", markerType: "square", markerSize: 5,
+			dataPoints: dataPoints_Med
+		});
+	
+		GenerarTabel("ValoresTab", m, b, R_2, Del_m, Del_b);
+				
+		LinGrafica("chartContainer", dataPoints_E, "Linealización de fuentes", "Log(Distancia)", "Log(Irradiancia)");		
+		
+
+	};
+	function NormRadiometria(){
+		let EjeX = 0, EjeY = 0, EjeY_2 = 0, D_X = 0, D_Y = 0, D_Y_2 = 0;
+			NYs = [], NYs_2 = [], X_L_D = [], X_R_D = [], Y_U_D = [], Y_D_D = [],Y_U_D_2 = [], Y_D_D_2 = [],
+			dataPointss = [], dataPoints_E = [], dataPointss_2 = [], dataPoints_E_2 = [], dataPoints_Med = [];
+		let Suma = 0;
+		EjeX = document.getElementById("EjeX").value,
+		D_X =document.getElementById("D_X").value,
+		EjeY = document.getElementById("EjeY").value,
+		EjeY_2 = document.getElementById("EjeY_2").value,
+		D_Y =document.getElementById("D_Y").value;
+		D_Y_2 =document.getElementById("D_Y_2").value;
+		let EjeXCad = EjeX.split(" "), EjeYCad = EjeY.split(" "), EjeYCad_2 = EjeY_2.split(" "), EjeDXCad = D_X.split(" "), EjeDYCad = D_Y.split(" "), EjeDYCad_2 = D_Y_2.split(" "),
+			Xss = new Array(EjeXCad.length), Yss = new Array(EjeYCad.length), Yss_2 = new Array(EjeYCad_2.length),
+			DXss = new Array(EjeDXCad.length), DYss = new Array(EjeDYCad.length), DYss_2 = new Array(EjeDYCad_2.length);
+		for(var i=0; i < EjeXCad.length; i++){
+			Xss[i]=parseFloat(EjeXCad[i]);
+			Yss[i]=parseFloat(EjeYCad[i]);
+			Yss_2[i]=parseFloat(EjeYCad_2[i]);
+			DXss[i]=parseFloat(EjeDXCad[i]);
+			DYss[i]=parseFloat(EjeDYCad[i]);
+			DYss_2[i]=parseFloat(EjeDYCad_2[i]);
+		}
+	
+			if (EjeX == 0 || EjeY == 0){
+				return alert("Las cadenas están vacías");
+			}
+			if (EjeX == 0 || EjeY_2 == 0){
+				return alert("Las cadenas están vacías");
+			}
+			if (EjeXCad.length != EjeYCad.length){
+				return alert("Las cadenas Tienen diferente longitud");
+			}
+			if (EjeXCad.length != EjeYCad_2.length){
+				return alert("Las cadenas Tienen diferente longitud");
+			}
+	
+		for(var i = 0; i< Xss.length; i++){
+			NYs.push(Yss[i]/Math.max(...Yss));
+			NYs_2.push(Yss_2[i]/Math.max(...Yss_2));
+			X_L_D.push(Xss[i] - DXss[i]);
+			X_R_D.push(Xss[i] + DXss[i]);
+			Y_U_D.push(NYs[i] + DYss[i]/Math.max(...Yss));
+			Y_D_D.push(NYs[i] - DYss[i]/Math.max(...Yss));
+			Y_U_D_2.push(NYs_2[i] + DYss_2[i]/Math.max(...Yss_2));
+			Y_D_D_2.push(NYs_2[i] - DYss_2[i]/Math.max(...Yss_2));
+			}
+				
+		for(var i = 0; i< Xss.length; i++){
+			dataPointss.push({
+				x: Xss[i], y: NYs[i]
+				});
+			dataPoints_Med.push({
+				x: Xss[i], y: NYs_2[i]
+				});
+			dataPoints_E.push({type: "line", markerType:"cross",markerSize:5, lineDashType: "dot",lineColor: "red",
+				dataPoints: [{x: X_L_D[i], y: NYs[i], color: "Red"},{x: X_R_D[i], y: NYs[i], color: "Red"} ]
+			});
+			dataPoints_E.push({type: "line", markerType:"cross",markerSize:5, lineDashType: "dot",lineColor: "red",
+				dataPoints: [{x: Xss[i], y: Y_U_D[i], color: "Red"},{x: Xss[i], y: Y_D_D[i], color: "Red"} ]
+			});
+			dataPoints_E.push({type: "line", markerType:"cross",markerSize:5, lineDashType: "dot",lineColor: "red",
+				dataPoints: [{x: X_L_D[i], y: NYs_2[i], color: "Red"},{x: X_R_D[i], y: NYs_2[i], color: "Red"} ]
+			});
+			dataPoints_E.push({type: "line", markerType:"cross",markerSize:5, lineDashType: "dot",lineColor: "red",
+				dataPoints: [{x: Xss[i], y: Y_U_D_2[i], color: "Red"},{x: Xss[i], y: Y_D_D_2[i], color: "Red"} ]
+			});
+			}
+		dataPoints_E.push({
+		type: "spline", lineColor: "blue",
+			dataPoints: dataPointss
+		}, {type: "spline", lineColor: "red",
+			dataPoints: dataPoints_Med
+		});
+					
+		LinGrafica("chartContainer", dataPoints_E, "Fuentes normalizadas", "Distancia", "Irradiancia");		
+		
+
+};
+	</script>
+
+	<noscript>
+	El navegador no es compatible con los script: actualizar el navegador o utilizar uno diferente.
+	</noscript>
+</body>
+
+</html>

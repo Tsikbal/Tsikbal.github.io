@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset = "UTF-8"/>
+	<meta name = "descripción" content= "Página para el Laboratorio de Óptica de la Facultad de Ciencias, UNAM"/>
+	<meta name = "robots" content = "index, follow"/>
+	<title>Laboratorio de Óptica</title>
+	<link rel = "shortcut icon" href = "../icono.ico" type = "image/x-icon" />
+	<meta name = "viewport" content = "width=device-width, inictial-scale=1.0">
+	
+	<link href = "https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href= "../CSS/index.css"> <!--CambiarRuta-->
+</head>
+
+<body>
+	<header class = "Encabezado" style = "height: 140px;">
+		<div class = "Titulo">
+			AREAS
+		</div>
+		<figure class= "LOGO">
+			<img src="../IMG/Tsikbal naat.png" class="LOGO_img"> <!--CambiarRuta-->
+		</figure>
+		
+		<nav class = "Menu">
+			<ul class = "Menu_Desplegable Menu_Des_Desp">
+				<li class = "Menu_Opciones"><a href = "../index.html" class="menu_link">Principal</a><!--CambiarRuta-->
+				</li>
+				<li class = "Menu_Opciones Menu_Opciones_Desp"><a href = "Áreas.html" class="menu_link">Áreas</a>
+				</li>
+				<li class = "Menu_Opciones"><a href = "Galeria.html" class="menu_link">Galeria</a></li>
+				<li class = "Menu_Opciones"><a href = "Vínculos.html" class="menu_link">Vínculos</a></li>
+				<li class = "Menu_Opciones"><a href = "Contacto.html" class="menu_link">Contacto</a></li>
+			</ul>
+		</nav>
+		<figure class = "menu_menor">
+			<img src = "../IMG/bx-menu.svg" class = "menu_img"> <!--CambiarRuta-->
+		</figure>
+	</header>
+
+	<main class = "Principal_Areas">
+		<div style = "text-align: center; color: #fff; font-size: 25px; margin-bottom: 15px;">
+		Da CLICK para desplegar las opciones.
+		</div>
+		<section class = "sub-Menu-Mat">
+			<div class = "sub-Menu-Caja" ><div class = "sub-Menu-Txt">Electrónica</div>
+			<a href = "Áreas/Electronica/Electronica.html" class = "a-Tema-sub"><img src = "../IMG/tlacuache.jpg" class = "sub-Menu-img"></a></div>
+			
+			<div class = "sub-Menu-Caja" onclick = "Desplegar_Fisica()"><div class = "sub-Menu-Txt">Física</div>
+			<img src = "../IMG/tlacuache.jpg" class = "sub-Menu-img"></div>
+			
+			<div class = "sub-Menu-Caja"><div class = "sub-Menu-Txt">Instrumentos y Medicion</div>
+			<a href = "Áreas/Instrumentos y Medicion/Instrumentación.html" class = "a-Tema-sub"><img src = "../IMG/tlacuache.jpg" class = "sub-Menu-img"></a></div>
+		</section>
+		<!-- <section  id = "Tema-sub-Electronica" style = "display: none;"> PENDIENTE: CUANDO AGREGUEMOS MÁS INFORMACIÓN-->
+			<!-- <div class =  "Tema-sub-text"> -->
+				<!-- Tema_Elec_2 -->
+			<!-- </div> -->
+			<!-- <div class =  "Tema-sub-text"> -->
+				<!-- Tema_Elec_1 -->
+			<!-- </div> -->
+		<!-- </section>	 -->
+		<section  id = "Tema-sub-Fisica" style = "display: none;">
+			<a href = "Áreas/Física/Óptica.html" class = "a-Tema-sub"><div class =  "Tema-sub-text" >
+				Óptica
+			</div>
+			</a>
+			<a href = "Áreas/Física/Mecánica.html" class = "a-Tema-sub"><div class =  "Tema-sub-text">
+				Mecánica
+			</div></a>
+			
+		</section>
+			
+	</main>
+	
+	<footer class="PPag">
+		<div class ="Text_PP">
+			Tsikbal Naat <br />
+			Erick Barrios<br />
+			Roxette Arvídez
+		</div>
+		
+		<div class = "Redes">
+			<a href ="https://youtube.com/@TsikbalNaat?si=plkLdA8T7rxn5Sbh" target="_blank" class = "Redes-icon"><i class='bx bxl-youtube'></i></a>
+			<a href ="./" class = "Redes-icon"><i class='bx bxl-instagram' ></i></a>
+		</div>
+	</footer>
+	<script src = "../JS/Menu_800px.js"></script>
+	<script src = "../JS/Desplegar.js"></script>
+</body>
+
+</html>
+	
