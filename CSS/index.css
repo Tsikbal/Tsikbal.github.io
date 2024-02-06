@@ -358,6 +358,9 @@ main{
 	color: #fff;
 }
 
+.menu_complemento{
+	display: none;
+}
 .Cuerpo_2{
 	width: 20%;
 	padding: 2% 8% 1% 1%;
@@ -729,5 +732,35 @@ table{
 	}
 	.Menu ul{
 		justify-content: unset;
+	}
+	.Caja h3{
+		width: inherit;
+	}
+	.Cuerpo_1{
+		width:100%;
+	}
+	
+	.Cuerpo_2{
+		display: none;
+	}
+	
+	.Titulo_temas{
+		top: 150px;
+	}
+	.menu_complemento{
+		display: flex;
+		padding-top: 20px;
+	}
+	.menu_complemento ul{
+		list-style: none;
+		color: #fff;
+		font-family: 'Dosis', sans-serif;
+		text-align: justify;
+		font-size: 15px;
+		display: contents;
+	}
+	
+	.menu_complemento li{
+		margin: auto;
 	}
 }
