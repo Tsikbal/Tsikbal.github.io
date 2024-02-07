@@ -150,8 +150,6 @@ nav{
 .menu_menor{
 	position: absolute;
 	left:90%;
-	width: 8%;
-	padding: 1%;
 	margin: 0.5% 1%;
 	align-items: center;
 	cursor: pointer;
