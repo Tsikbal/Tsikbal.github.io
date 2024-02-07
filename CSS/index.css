@@ -695,9 +695,9 @@ table{
 	
 	.Menu_Desplegable{
 		display: grid;
-		width: 300px;
+		width: 250px;
 		right: 0;
-		top: 80px;
+		max-height: 65%;
 		position: fixed;
 		background-color: #0c383e;
 	}
