@@ -761,4 +761,7 @@ table{
 	.menu_complemento li{
 		margin: auto;
 	}
+	#Tema-sub-Fisica, #Tema-sub-Electronica, #Tema-sub-Instrum{
+    	font-size: 30px;
+	}
 }
