@@ -787,4 +787,10 @@ table{
 	.sub-Menu-Caja{
 		width:70%;
 	}
+	#Datos label{
+	font-size: 5px;
+	}
+	#Datos ul{
+	display: block;
+	}
 }
