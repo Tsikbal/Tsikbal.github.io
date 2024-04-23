@@ -82,6 +82,13 @@ header{
 	background-position: 50% 80%;
 }
 
+.Encabezado_Michelson{
+	background-color: black;
+	background-image: url("../IMG/Man/Michelson.jpg");
+	background-size: 25%;
+	background-repeat: space;
+}
+
 .Encabezado_Óptica{ 
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../IMG/Man/Óptica.jpg");
 	background-position: 50% 15%;
