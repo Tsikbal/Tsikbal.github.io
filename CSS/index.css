@@ -84,9 +84,10 @@ header{
 
 .Encabezado_Michelson{
 	background-color: black;
-	background-image: url("../IMG/Man/Michelson.jpg");
-	background-size: 25%;
-	background-position: 50% 80%;
+	background-image: url("../IMG/Man/Michelson_V.png");
+	background-size: 60%;
+	background-position: 100% 30%;
+	background-repeat: no-repeat;
 }
 
 .Encabezado_Óptica{ 
