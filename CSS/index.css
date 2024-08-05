@@ -163,6 +163,13 @@ header{
 	backdrop-filter: blur(50px);
 }
 
+.Encabezado_FuenteHV{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../IMG/Man/Fuente HV.jpg");
+	background-size: 45%;
+	background-position: 50% 70%;
+	backdrop-filter: blur(50px);
+}
+
 .LOGO{
 	height: 130px;
 	padding: 0;
