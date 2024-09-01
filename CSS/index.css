@@ -789,6 +789,9 @@ table{
 		display: none;
 	}
 
+	.menu_cel{
+		display: flex;
+	}
 	.menu_cel ul, .menu_cel li {
 		margin: 0;
 		padding: 0;
@@ -827,7 +830,7 @@ table{
 		visibility: hidden;
 		z-index: 1;
 	}
-	li:hover ul#submenu_cel {
+	li:hover ul #submenu_cel {
 		opacity: 1;
 		top: 40px;	
 		visibility: visible;
@@ -871,22 +874,7 @@ table{
 	.Titulo_temas{
 		top: 150px;
 	}
-	.menu_complemento{
-		display: flex;
-		padding-top: 20px;
-	}
-	.menu_complemento ul{
-		list-style: none;
-		color: #fff;
-		font-family: 'Dosis', sans-serif;
-		text-align: justify;
-		font-size: 15px;
-		display: contents;
-	}
 	
-	.menu_complemento li{
-		margin: auto;
-	}
 	#Tema-sub-Fisica, #Tema-sub-Electronica, #Tema-sub-Instrum{
     	font-size: 30px;
 	}
