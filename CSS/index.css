@@ -315,7 +315,7 @@ hr{
 	font-size: 20px;
     padding: 2px 20px;
     display: flex;
-    height: auto;
+    height: 80px;
     align-items: center;
 }
 
