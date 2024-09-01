@@ -837,7 +837,7 @@ table{
 		visibility: hidden;
 		z-index: 1;
 	}
-	li:hover ul #submenu_cel {
+	li:hover ul#submenu_cel {
 		opacity: 1;
 		top: 40px;	
 		visibility: visible;
