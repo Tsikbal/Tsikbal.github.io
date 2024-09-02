@@ -311,11 +311,10 @@ hr{
 .menu_link{
     color: #fff;
     text-decoration: none;
-	font-family: 'Dosis', sans-serif; /*Letra*/
-	font-size: 20px;
+    font-family: 'Dosis', sans-serif; /*Letra*/
+    font-size: 20px;
     padding: 2px 20px;
     display: flex;
-    height: 80px;
     align-items: center;
 }
 
@@ -765,7 +764,10 @@ table{
 	hr{
 		display: none;
 	}
-	
+
+	.menu_link{
+    		height: 80px;
+	}
 	.Menu_Desplegable{
 		display: grid;
 		width: 250px;
