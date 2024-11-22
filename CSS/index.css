@@ -637,8 +637,8 @@ main{
 
 .Foto{
 	width: 330px;
-	height: 330px;
-	border-radius: 10% 2%;
+	height: 360px;
+	border-radius: 2% 2%;
 	box-shadow: 10px 2px 2px rgba(0, 0, 0, 0.4);
 	margin: 20px;
 	text-align: center;
@@ -648,7 +648,7 @@ main{
 
 .F2{
 	width: 330px;
-	height: 230px;
+	height: 200px;
 	overflow: hidden;
 }
 
@@ -665,7 +665,7 @@ main{
 .Foto img{
 	object-fit: cover;
 	width: 330px;
-	height: 230px;
+	height: 200px;
 }
 
 .Foto h4{
@@ -675,7 +675,7 @@ main{
 
 .Foto p{
 	padding: 0 1rem;
-	font-size:10px;
+	font-size:12px;
 	font-weight: 300;
 	color: #030b24;
 }
