@@ -422,6 +422,31 @@ main{
 	transform: scale(1.1);
 }
 
+.figura{
+	display: inline-block;
+	position: relative;
+	height: auto;
+	width: 30%;
+}
+
+.capturatexto {
+	position: absolute;
+    bottom: 0;               /* Texto en la parte inferior de la imagen */
+    left: 0;                 /* Alineado a la izquierda */
+    width: 100%;             /* Cubriendo todo el ancho de la figura */
+    text-align: center;      /* Centrado horizontalmente */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: #fff;             /* Texto blanco */
+    padding: 5px;
+    font-size: 25px;
+    opacity: 0;              /* Oculto por defecto */
+    transition: opacity 0.3s; /* Transición suave */
+}
+
+.figura:hover > .capturatexto {
+	opacity: 1; 
+}
+
 .Cuerpo_1{
 	width:80%;
 	padding: 2% 1% 1% 5%;
