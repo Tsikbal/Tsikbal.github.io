@@ -20,6 +20,64 @@ header{
 	display: flex;
 }
 
+/* Buscador de contenido */
+#ctn-icon-search {
+    left: 70%;
+    display: flex;
+    width: 15px;
+    position: absolute;
+    top: 90px;
+}
+
+#ctn-icon-search i:hover{
+	color: #46a2fd
+	cursor: pointer;
+}
+
+#ctn-bars-search {
+    position: absolute;
+	top: auto;
+    width: 100%;
+	background: #000;
+    padding: 10px;
+	display: none;
+	z-index: 8;
+}
+
+#ctn-bars-search input{
+	display: block;
+	width: 1200px;
+	margin: auto;
+	padding: 10px;
+	font-size: 18px;
+	outline: 0;
+}
+
+#box-search{
+	position: absolute;
+	top: 200px;
+	width: 1200px;
+	background: #fff;
+	z-index: 2;
+	display: none;
+}
+
+#box-search li{
+	padding: 10px;
+	list-style: none;
+}
+
+#box-search i{
+	padding-right: 3px;
+}
+
+#Opciones_buscador{
+	display:flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
 .Titulo_temas{
 	text-align: center;
 	position: relative; 
@@ -777,6 +835,29 @@ table{
 /* Pendiente Menu 800px */
 
 @media (max-width: 800px) {
+	.Titulo{
+		font-size: 33px;
+		margin: 17% 17%;
+	}
+	
+	#Opciones_buscador{
+		display: none;
+	}
+
+	#ctn-icon-search {
+		left: 85%;
+		display:none
+	}
+	#ctn-bars-search {
+		z-index: 4;
+		display: none;
+	}
+	
+	#box-search{
+		display: none;
+		background: rgba(255, 255, 255, 0.5);
+	}
+	
 	.PPag{
 		height: 100%;
 		padding: 3% 10% 3% 10%;
