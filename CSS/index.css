@@ -89,7 +89,7 @@ header{
 }
 
 .Encabezado{
-    height: 120px;
+    height: 150px;
 }
 /* Optica */
 
@@ -222,7 +222,7 @@ header{
 }
 
 .Encabezado_FuenteHV{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../IMG/Man/FuenteHV.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../IMG/Man/FuenteHV.png");
 	background-size: 45%;
 	background-position: 50% 70%;
 	backdrop-filter: blur(50px);
@@ -265,7 +265,7 @@ nav{
 }
 
 .Menu{
-	top: 70px;
+	top: 80px;
 	position: absolute;
 }
 
@@ -401,7 +401,7 @@ main{
 	width: 800px;
 	height: 400px;
 	overflow:hidden;
-	margin: 1% auto 1% auto;
+	margin: 5% auto 1% auto;
 	position: relative;
 	box-shadow: 10px 2px 2px rgba(0, 0, 0, 0.4);
 }
@@ -489,16 +489,16 @@ main{
 
 .capturatexto {
 	position: absolute;
-	bottom: 0;               /* Texto en la parte inferior de la imagen */
-	left: 0;                 /* Alineado a la izquierda */
-	width: 100%;             /* Cubriendo todo el ancho de la figura */
-	text-align: center;      /* Centrado horizontalmente */
-	background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-	color: #fff;             /* Texto blanco */
-	padding: 5px;
-	font-size: 25px;
-	opacity: 0;              /* Oculto por defecto */
-	transition: opacity 0.3s; /* Transición suave */
+    bottom: 0;               /* Texto en la parte inferior de la imagen */
+    left: 0;                 /* Alineado a la izquierda */
+    width: 100%;             /* Cubriendo todo el ancho de la figura */
+    text-align: center;      /* Centrado horizontalmente */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: #fff;             /* Texto blanco */
+    padding: 5px;
+    font-size: 25px;
+    opacity: 0;              /* Oculto por defecto */
+    transition: opacity 0.3s; /* Transición suave */
 }
 
 .figura:hover > .capturatexto {
@@ -696,7 +696,7 @@ main{
 .Foto{
 	width: 330px;
 	height: 360px;
-	border-radius: 2% 2%;
+	border-radius: 10% 2%;
 	box-shadow: 10px 2px 2px rgba(0, 0, 0, 0.4);
 	margin: 20px;
 	text-align: center;
@@ -733,7 +733,7 @@ main{
 
 .Foto p{
 	padding: 0 1rem;
-	font-size:12px;
+	font-size:15px;
 	font-weight: 300;
 	color: #030b24;
 }
@@ -838,10 +838,11 @@ table{
 	.Titulo{
 		display: none;
 	}
-
+	
 	.LOGO_img{
 		display: none;
 	}
+
 	
 	#Opciones_buscador{
 		display: none;
@@ -860,7 +861,7 @@ table{
 		display: none;
 		background: rgba(255, 255, 255, 0.5);
 	}
-	
+
 	.PPag{
 		height: 100%;
 		padding: 3% 10% 3% 10%;
