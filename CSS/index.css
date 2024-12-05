@@ -27,7 +27,7 @@ header{
     display: flex;
     width: 100px;
     position: absolute;
-    top: 20%;
+    top: 105px;
 }
 
 #ctn-icon-search h5{
@@ -275,7 +275,7 @@ nav{
 }
 
 .Menu{
-	top: 80px;
+	top: 100px;
 	position: absolute;
 }
 
@@ -559,12 +559,15 @@ main{
 
 .sub-Menu-Caja{
 	width: 30%;
-	color: aliceblue;
 	margin-left: 10px;
 	align-items: center;
     justify-content: center;
     display: flex;
 	margin-bottom: 15px;
+}
+
+.sub-Menu-Caja:hover{
+	margin-bottom: 35px;
 	cursor:pointer;
 }
 	
@@ -575,14 +578,23 @@ main{
 	justify-content: center;
 	text-align:center;
 	display: flex;
+	color: aliceblue;
+	opacity: 1;
 }
 
+.sub-Menu-Txt:hover{
+	font-size: 45px;
+	-webkit-text-stroke: 1px black;
+}
 
 .sub-Menu-img{
 	width: 100%;
-	opacity: 0.3;
+	opacity: 0.1;
 }
 
+.sub-Menu-img:hover{
+	opacity: 0.5;
+}
 
 .sub-Menu{
 	display: grid;
