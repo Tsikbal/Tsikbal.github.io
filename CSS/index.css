@@ -22,11 +22,21 @@ header{
 
 /* Buscador de contenido */
 #ctn-icon-search {
+	background: #85a8a8;
     left: 70%;
     display: flex;
-    width: 15px;
+    width: 100px;
     position: absolute;
-    top: 90px;
+    top: 20%;
+}
+
+#ctn-icon-search h5{
+    margin: 10px;
+}
+
+#ctn-icon-search i{
+    align-items: center;
+    display: flex;
 }
 
 #ctn-icon-search i:hover{
@@ -56,7 +66,6 @@ header{
 #box-search{
 	position: absolute;
 	top: 200px;
-	height: 45px;
 	width: 1200px;
 	background: #fff;
 	z-index: 2;
@@ -64,18 +73,12 @@ header{
 }
 
 #box-search li{
-	padding-top: 12px;
-    	margin: 5px;
+	padding: 10px;
 	list-style: none;
 }
 
 #box-search i{
 	padding-right: 3px;
-}
-
-#box-search a{
-    text-decoration: none;
-    color: black;
 }
 
 #Opciones_buscador{
