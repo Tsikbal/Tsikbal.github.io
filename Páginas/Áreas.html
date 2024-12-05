@@ -8,6 +8,7 @@
 	<link rel = "shortcut icon" href = "../Icono.ico" type = "image/x-icon" />
 	<meta name = "viewport" content = "width=device-width, inictial-scale=1.0">
 	
+	<script src="https://kit.fontawesome.com/414763b6a3.js" crossorigin="anonymous"></script>
 	<link href = "https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
 	<link rel="stylesheet" href= "../CSS/index.css"> <!--CambiarRuta-->
 </head>
@@ -35,11 +36,36 @@
 		<figure class = "menu_menor">
 			<img src = "../IMG/bx-menu.svg" class = "menu_img"> <!--CambiarRuta-->
 		</figure>
+		
+		<div id = "ctn-icon-search">
+			<h5>Buscador</h5>
+			<i class="fa-solid fa-magnifying-glass" id = "icon-search"></i>
+		</div>
 	</header>
 
 	<main class = "Principal_Areas">
+		<div id = "ctn-bars-search">
+			<input type = "text" id = "inputSearch" placeholder = "¿Qué deseas buscar?" >
+		</div>
+		<div id = "Opciones_buscador">
+			<ul id = "box-search">
+				<li><a href = "Páginas/Áreas/Electronica/Electronica.html"><i class="fa-solid fa-magnifying-glass"></i> Electrónica</a></li>
+				<li><a href = "Páginas/Áreas/Electronica/Electronica/"><i class="fa-solid fa-magnifying-glass"></i> Temporizador 555</a></li>
+				<li><a href = "Páginas/Áreas/Electronica/Electronica/CEV.html"><i class="fa-solid fa-magnifying-glass"></i> Convertidor elevador de voltaje</a></li>
+				<li><a href = "Páginas/Áreas/Electronica/Electronica/MCW.html"><i class="fa-solid fa-magnifying-glass"></i>Multiplicador de Cockcroft–Walton</a></li>
+				<li><a href = "Páginas/Áreas/Electronica/Electronica/FuenteHV.html"><i class="fa-solid fa-magnifying-glass"></i>Fuente de Alto Voltaje</a></li>
+				<li><a href = "Páginas/Áreas/Electronica/Electronica/LED´s y Resistencias.html"><i class="fa-solid fa-magnifying-glass"></i>Resistencias</a></li>
+				<li><a href = "#"><i class="fa-solid fa-magnifying-glass"></i>Polarización</a></li>
+				<li><a href = "#"><i class="fa-solid fa-magnifying-glass"></i> Radiometría</a></li>
+				<li><a href = "#"><i class="fa-solid fa-magnifying-glass"></i>Reflexión y Refracción</a></li>
+				<li><a href = "#"><i class="fa-solid fa-magnifying-glass"></i>Espectroscopía</a></li>
+				<li><a href = "#"><i class="fa-solid fa-magnifying-glass"></i>Michelson</a></li>
+				<li><a href = "#"><i class="fa-solid fa-magnifying-glass"></i>Polarización</a></li>
+			</ul>
+		</div>
+		<div id = "cover-ctn-search"></div>
+		
 		<div style = "text-align: center; color: #fff; font-size: 25px; margin-bottom: 15px;">
-		Da CLICK para desplegar las opciones.
 		</div>
 		<section class = "sub-Menu-Mat">
 			<div class = "sub-Menu-Caja" ><div class = "sub-Menu-Txt">Electrónica</div>
@@ -85,6 +111,7 @@
 		</div>
 	</footer>
 	<script src = "../JS/Menu_800px.js"></script>
+	<script src = "../JS/Buscador.js"></script>
 	<script src = "../JS/Desplegar.js"></script>
 </body>
 
