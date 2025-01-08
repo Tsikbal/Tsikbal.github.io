@@ -107,7 +107,7 @@ header{
     height: 330px;
 	width: 100%;
 	background-position: 50% 60%;
-	background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../IMG/Man/PropagacióndelzLuzyRadiometría.jpg"); /*CambiarRuta*/
+	background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../IMG/Man/Radiometría.jpg"); /*CambiarRuta*/
 	background-size: cover;
 }
 
