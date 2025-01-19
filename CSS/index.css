@@ -705,6 +705,7 @@ main{
 .boton-regresar{
 	border: 2px solid white;
 	width: 15%;
+	margin: 20px;
 }
 
 .boton-regresar a{
