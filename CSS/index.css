@@ -439,7 +439,7 @@ main{
 	width: 800px;
 	height: 400px;
 	overflow:hidden;
-	margin: 5% auto 1% auto;
+	margin: 5% 0 0 5%;
 	position: relative;
 	box-shadow: 10px 2px 2px rgba(0, 0, 0, 0.4);
 }
