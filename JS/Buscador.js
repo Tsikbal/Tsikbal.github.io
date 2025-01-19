@@ -1,73 +1,72 @@
 //Buscador de contenido
-//Declaramos variables
-const bars_search = document.getElementById("ctn-bars-search");
-const icon_search = document.getElementById("ctn-icon-search");
-const box_search = document.getElementById("box_search"); 
-const inputSearch = document.getElementById("inputSearch");
-const opciones_buscador = document.getElementById("Opciones_buscador"); 
 
+
+//Ejecutando funciones
+document.getElementById("ctn-icon-search").addEventListener("click", mostrar_buscador);
+document.getElementById("cover-ctn-search").addEventListener("click", ocultar_buscador);
+
+//Declarando variables
+bars_search =       document.getElementById("ctn-bars-search");
+cover_ctn_search =  document.getElementById("cover-ctn-search");
+inputSearch =       document.getElementById("inputSearch");
+box_search =        document.getElementById("box-search");
+
+
+//Funcion para mostrar el buscador
 function mostrar_buscador(){
-    bars_search.style.display = "flex";
-	inputSearch.focus();
-}
 
-function ocultar_buscador(event){
-    // Verifica si el clic fue fuera de la barra, del ícono y de las opciones
-    if (
-        !bars_search.contains(event.target) && 
-        !icon_search.contains(event.target)
-    ) {
-        bars_search.style.display = "none"; // Ocultar barra de búsqueda
+    bars_search.style.top = "150px";
+    cover_ctn_search.style.display = "block";
+    inputSearch.focus();
+
+    if (inputSearch.value === ""){
+        box_search.style.display = "none";
     }
+
 }
 
-function ocultar_box_search(event) {
-    // Verifica si el clic fue fuera del contenedor de opciones
-    if (
-        !opciones_buscador.contains(event.target) && // Contenedor de las opciones
-        !inputSearch.contains(event.target) // El input de búsqueda
-    ) {
-        opciones_buscador.style.display = "none"; // Ocultar las opciones
-    }
+//Funcion para ocultar el buscador
+function ocultar_buscador(){
+
+    bars_search.style.top = "-100px";
+    cover_ctn_search.style.display = "none";
+    inputSearch.value = "";
+    box_search.style.display = "none";
+
 }
 
-//Filtro de busqueda
-function buscador_opciones() {
-    // Obtener el valor ingresado en el input
-    const filter = inputSearch.value.toUpperCase();
-    // Seleccionar todos los elementos <li> dentro de #box-search
-    const li = document.querySelectorAll("#box-search li");
-	let hasResults = false;
 
-    // Recorrer cada elemento <li>
-    li.forEach((item) => {
-        // Obtener el texto dentro del <a>
-        const a = item.querySelector("a");
-        const textValue = a.textContent || a.innerText;
+//Creando filtrado de busqueda
 
-        // Comparar el texto con el filtro
-        if (textValue.toUpperCase().indexOf(filter) > -1) {
-            item.style.display = ""; // Mostrar si coincide
-			hasResults = true;
-        } else {
-            item.style.display = "none"; // Ocultar si no coincide
+document.getElementById("inputSearch").addEventListener("keyup", buscador_interno);
+
+function buscador_interno(){
+
+
+    filter = inputSearch.value.toUpperCase();
+    li = box_search.getElementsByTagName("li");
+
+    //Recorriendo elementos a filtrar mediante los "li"
+    for (i = 0; i < li.length; i++){
+
+        a = li[i].getElementsByTagName("a")[0];
+        textValue = a.textContent || a.innerText;
+
+        if(textValue.toUpperCase().indexOf(filter) > -1){
+
+            li[i].style.display = "";
+            box_search.style.display = "block";
+
+            if (inputSearch.value === ""){
+                box_search.style.display = "none";
+            }
+
+        }else{
+            li[i].style.display = "none";
         }
-    });
-	
-	const boxSearch = document.getElementById("box-search");
-    if (filter && hasResults) {
-        boxSearch.style.display = "block"; // Mostrar si hay coincidencias
-    } else {
-        boxSearch.style.display = "none"; // Ocultar si no hay coincidencias o el input está vacío
+
     }
+
+
+
 }
-
-// Agregar eventos al ícono
-icon_search.addEventListener("mouseover", mostrar_buscador);
-icon_search.addEventListener("click", mostrar_buscador);
-document.addEventListener("click", (event) => {
-    ocultar_buscador(event);  // Oculta la barra de búsqueda
-    ocultar_box_search(event); // Oculta las opciones
-});
-inputSearch.addEventListener("keyup", buscador_opciones);
-
