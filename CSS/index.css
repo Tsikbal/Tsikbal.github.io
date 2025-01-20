@@ -156,7 +156,7 @@ header{
 }
 
 .Encabezado_Polarizacion{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../IMG/Man/Pol.png");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../IMG/Man/Pol.jpg");
 	background-size: 50%;
 	background-position: 50% 80%;
 }
