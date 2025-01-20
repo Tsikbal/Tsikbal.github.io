@@ -592,6 +592,27 @@ main{
 	text-align: center;
 }
 
+.tickcounter{
+	display: block;
+	left: 60%;
+	width: 400px;
+	height: 100px;
+	position: relative;
+	pointer-events: none;
+	}
+
+.Contador_P{
+	top: 80px;
+	}
+
+.Contador_T{
+	top: 130px;
+	}
+
+.Contador_P2{
+	top: 180px;
+	}
+
 /* Menu en la sección de áreas */
 
 .sub-Menu-Mat {
@@ -1104,9 +1125,20 @@ table{
 
 	.tickcounter{
 	display: flex;
-    	left: 5%;
     	top: 300px;
     	width: 100px;
     	height: 50px;
+	}
+
+	.Contador_P{
+	left: 80px;
+	}
+
+	.Contador_T{
+	left: 130px;
+	}
+
+	.Contador_P2{
+	left: 180px;
 	}
 }
