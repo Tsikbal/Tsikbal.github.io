@@ -1048,8 +1048,8 @@ table{
 	
 	.Galeria_superior{
 		height: auto;
-		width: 70%;
-		margin-top: 25px;
+		width: 100%;
+		margin: 25px;
 	}
 	.Menu ul{
 		justify-content: unset;
@@ -1100,5 +1100,13 @@ table{
 	}
 	#Datos ul{
 	display: block;
+	}
+
+	.tickcounter{
+	display: flex;
+    	left: 5%;
+    	top: 300px;
+    	width: 100px;
+    	height: 50px;
 	}
 }
