@@ -175,6 +175,14 @@ header{
 	background-repeat: no-repeat;
 }
 
+.Encabezado_CamOsc{
+	background-color: black;
+	background-image: url("../IMG/Man/Camara Oscura.jpg");
+	background-size: 60%;
+	background-position: 100% 30%;
+	background-repeat: no-repeat;
+}
+
 .Encabezado_Óptica{ 
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../IMG/Man/Óptica.jpg");
 	background-position: 50% 15%;
