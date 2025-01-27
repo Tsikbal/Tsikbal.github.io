@@ -143,6 +143,11 @@ header{
 	background-size: 40%;
 }
 
+.Encabezado_Telesc{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../IMG/Man/Telescopio.jpg");
+	background-size: 40%;
+}
+
 .Encabezado_IndRef{ 
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../IMG/Man/Refracción.jpg");
 	background-size: 70%;
