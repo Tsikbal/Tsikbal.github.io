@@ -195,6 +195,11 @@ header{
 	background-size: 40%;
 }
 
+.Encabezado_NavajaFoucault{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../IMG/Man/Navaja Foucault.jpg");
+	background-size: 40%;
+}
+
 .Encabezado_Óptica{ 
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../IMG/Man/Óptica.jpg");
 	background-position: 50% 15%;
