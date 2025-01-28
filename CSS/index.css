@@ -185,6 +185,16 @@ header{
 	background-repeat: no-repeat;
 }
 
+.Encabezado_CosenoLambert{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../IMG/Man/Lambert.jpg");
+	background-size: 40%;
+}
+
+.Encabezado_Microsc{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../IMG/Man/Microscopio.jpg");
+	background-size: 40%;
+}
+
 .Encabezado_Óptica{ 
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../IMG/Man/Óptica.jpg");
 	background-position: 50% 15%;
