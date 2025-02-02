@@ -1128,6 +1128,7 @@ table{
 	.Galeria_superior{
 		height: 500px;
 		width: 100%;
+		Top: 50px;
 		margin: 25px;
 	}
 	.Menu ul{
@@ -1142,7 +1143,7 @@ table{
 
 	
 	.Intro_index{
-	    margin: 100px 20% 100px 20%;
+	    margin: 50px 20% 100px 20%;
 	}
 	
 	.Cuerpo_2{
