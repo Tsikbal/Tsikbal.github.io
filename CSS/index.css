@@ -1125,6 +1125,11 @@ table{
 	.Cuerpo_1{
 		width:100%;
 	}
+
+	
+	.Intro_index{
+	    margin: 100px 20% 100px 20%;
+	}
 	
 	.Cuerpo_2{
 		display: none;
