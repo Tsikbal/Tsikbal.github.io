@@ -1000,6 +1000,11 @@ table{
 	
 	.menu_menor{
 		display: flex;
+		z-index: 10;
+	}
+	
+	.Menu{
+		top: 40px;
 	}
 	
 	hr{
@@ -1010,7 +1015,7 @@ table{
 	}
 	
 	.menu_link{
-    		height: 80px;
+    		height: 50px;
 	}
 	.Menu_Desplegable{
 		display: grid;
@@ -1155,6 +1160,26 @@ table{
 	.sub-Menu-Caja{
 		width:70%;
 	}
+
+	.figura {
+        	width: 80%; /* Las figuras ocuparán todo el ancho disponible */
+    	}
+
+    	.capturatexto {
+        	font-size: 18px; /* Texto más pequeño para pantallas pequeñas */
+		position: absolute;
+	}
+
+    	.galeria {
+        	display: block;
+        	gap: 10px; /* Espacio entre las imágenes */
+    	}
+
+    	.galeria img {
+        	width: 100%; /* Asegurar que las imágenes se ajusten a su contenedor */
+        	height: auto; /* Mantener la proporción de la imagen */
+    	}
+	
 	#Datos label{
 	font-size: 8px;
 	}
