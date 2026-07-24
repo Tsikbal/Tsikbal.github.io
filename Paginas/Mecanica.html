@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, inictial-scale=1.0"/>
+	<meta name="descripción" content= "Divulgación de la Física, Tsikbal Naat"/>
+	<meta name="keywords" content="TsikbalNaat, Tsikbal, Naat"/>	
+	<meta name="robots" content="TsikbalNaat, Tsikbal, Naat"/>
+
+	<title>Tsikbal Naat</title>
+	<link rel="shortcut icon" href="Icono.ico" type="image/x-icon" />
+	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+	<link href = "https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet"> 
+	<link rel="stylesheet" href= "../CSS/Estilos.css"> <!--Archivo de estilos-->
+</head>
+<body>
+	<header class="Encabezado">
+		<figure class= "LOGO_Encabezado">
+			<img src="../IMG/Tsikbal naat.png" class="LOGO_img"> <!--CambiarRuta-->
+			<p class = "Titulo_Encabezado">
+			TSIKBAL
+		    </p>
+		</figure>
+		
+		<nav class = "Menu">
+			<ul class = "Menu_Desplegable">
+				<li class = "Menu_Opciones"><a href = "../index.html" class="menu_link">Óptica</a>
+				</li>
+				<li class = "Menu_Opciones"><a href = "Electronica.html" class="menu_link">Electrónica</a>
+				</li>
+				<li class = "Menu_Opciones"><a href = "" class="menu_link">Instrumentación</a>
+				</li>
+				<li class = "Menu_Opciones"><a href = "Mecanica.html" class="menu_link">Mecánica</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main class="Principal">
+		
+		<section class = "Mapa_Principal">
+			<div class = "Tema_1">
+				<div class="arrow-container">
+				<a href= "" class="Text_Tema_1"><h4>Introducción</h4></a>
+				
+					<i class="fi fi-sr-arrow-alt-circle-down arrow"></i>
+				</div>
+				<div class="bracket-container">
+                    <i class="fi fi-ts-bracket-square bracket"></i>
+                </div>
+				<div class = "Rama_1">
+					<div class = "Subtemas_1">
+						<a href= ""><img src = "../IMG/Man/Óptica.jpg"></a>	<!--CambiarRuta-->			
+						<a href= ""><h4>Manejo de Equipo</h4></a> 
+					</div>
+			
+					<div class = "Subtemas_1">
+						<a href= ""><img src = "../IMG/Man/Michelson.jpg"></a>	<!--CambiarRuta-->			
+						<a href= ""><h4>Calidad Óptica</h4></a> 
+					</div>
+					<div class = "Subtemas_1">
+						<a href= ""><img src = "../IMG/Man/Reloj Péndulo.jpg"></a>	<!--CambiarRuta-->			
+						<a href= ""><h4>Manejo Básico de Incertidumbres</h4></a> 
+					</div>
+					<div class = "Subtemas_1">
+						<a href= ""><img src = "../IMG/Man/Alineación.jpg"></a>	<!--CambiarRuta-->			
+						<a href= ""><h4>Alineación Óptica</h4></a> 
+					</div>
+					
+				</div>
+			</div>
+		</section>	
+	</main>
+	
+	<footer class="PiePagina">
+		<div class ="Autor">
+			Tsikbal Naat <br />
+			Erick Barrios<br />
+			Roxette Arvídez
+		</div>
+		
+		<div class = "Redes">
+			<ul>
+				<a href ="https://youtube.com/@TsikbalNaat?si=plkLdA8T7rxn5Sbh" target="_blank"class = "Redes-icon"><i class='bx bxl-youtube'></i></a>
+				<a href ="./" class = "Redes-icon"><i class='bx bxl-instagram' ></i></a>
+			</ul>
+		</div>
+	</footer>
+	
+	<script>
+// Solución simplificada - compara solo nombres de archivo
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop().toLowerCase();
+    const menuLinks = document.querySelectorAll('.menu_link');
+    
+    menuLinks.forEach(link => {
+        link.classList.remove('active');
+        
+        const linkHref = link.getAttribute('href').split('/').pop().toLowerCase();
+        
+        // Comparar nombres de archivo en minúsculas (case insensitive)
+        if (linkHref === currentPage) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
+	
+	<noscript>
+	El navegador no es compatible con los script: actualizar el navegador o utilizar uno diferente.
+	</noscript>
+	
+</body>
+
+</html>
