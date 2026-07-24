@@ -1,0 +1,471 @@
+*{
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
+}
+
+body {
+	font-family: 'Dosis', sans-serif; /*Letra fija*/
+	display:flex;
+	flex-direction: column;
+	}
+	
+/*Elementos de encabezado*/
+header{
+	background-color: #0a2929;
+    color: #fff;
+	width: 100%;
+	z-index: 3;
+	background-image: url("../IMG/Lentes.jpg");
+	background-position: top center;
+	background-position-y: 60%;
+    background-repeat: repeat;
+}
+
+.Encabezado{
+    height: 150px;
+}
+
+.LOGO_Encabezado{
+	height: 100px;
+	width: auto;
+	padding: 0;
+	margin:0 1%;
+	background-size: cover;
+	line-height: 100px;
+}
+
+.LOGO_img{
+	width:auto;
+	height:80%;
+	margin: 10px auto;
+	vertical-align: middle;
+}
+
+.Titulo_Encabezado{
+	max-width: 150px;
+	display: inline;
+	font-size: 35px;
+	margin: 0;
+	-webkit-text-stroke: 2px black;
+	vertical-align: middle;
+	text-transform: uppercase;
+}
+
+/* Menu computadora */
+nav{
+	width: 100%;
+	height: auto;
+	padding: 1%;
+	margin: 0;
+	justify-content: center;
+}
+
+.Menu{
+	position: absolute;
+	text-align: center;
+}
+
+.Menu ul{
+	list-style-type:none;
+	justify-content:space-between;
+}
+
+.Menu li{
+	display: inline;
+	text-decoration:none;
+	background-color: #645d5ds;
+}
+
+.Menu li a{
+	display: inline;
+	padding:16px;
+	color: white;
+	text-decoration:none;
+	background-color: #645d5d;
+}
+
+.Menu li a:hover, .Menu li a.active {
+	background-color: #F0E7E6;
+	color: black;
+}
+
+/* Buscador de contenido */
+#ctn-icon-search{
+	background: #3f5353;
+    position: absolute;
+    right: 250px;
+	top: 110px;
+    height: 30px;
+	padding: 5px;
+    display: flex;
+    justify-content: center;
+	cursor: pointer;
+	border-radius: 1px;
+}
+
+#ctn-icon-search h5{
+    margin-right: 10px;
+}
+
+#ctn-icon-search i{
+    font-size: 18px;
+    transition: all 50ms;
+}
+
+#ctn-icon-search:hover, i:hover{
+    color: #000;
+}
+
+
+#ctn-bars-search{
+    position: fixed;
+    width: 100%;
+	top: -100px;
+    padding: 5px;
+    z-index: 9;
+    transition: all 50ms;
+}
+
+#ctn-bars-search input{
+    display: block;
+    width: 800px;
+    margin: auto;
+    padding: 10px;
+    font-size: 18px;
+    outline: 0;
+}
+
+#box-search{
+    position: fixed;
+    top: 210px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    background: #fff;
+    z-index: 8;
+    overflow: hidden;
+    display: none;
+}
+
+#box-search li a{
+    display: block;
+    width: 1200px;
+    color: #777777;
+    padding: 12px 20px;
+}
+
+#box-search li a:hover{
+    background: #f3f3f3;
+}
+
+#box-search li a i{
+    margin-right: 10px;
+    color: #777777;
+}
+
+
+#cover-ctn-search{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 7;
+    display: none;
+}
+
+/* Cuerpo de la página */
+main{
+	min-height: 800px;
+	background-color:#121212;
+	display:flex;
+	gap: 30px;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.Mapa_Principal{
+	display: block;
+	align-items: center; 
+	height: auto;
+	margin: auto;
+}
+
+.Mapa_Principal a{
+	color: white;
+	display: flex;
+	width: 100%;
+	text-decoration: none;
+}
+
+.Mapa_Principal a:hover{
+	cursor: pointer;
+	color: black;
+}
+
+.Tabla_P{
+	border: 1px solid;
+	color: white;
+	border-collapse: collapse;
+	margin: 20px;
+}
+
+.Emergente{
+	border: 2px solid;
+	padding: 3px;
+	max-width: 700px;
+	width: 700px;
+}
+
+.Tabla_P th{
+	padding-left: 5px;
+	text-align: left;
+	font-size: 20px;
+	border: 2px solid;
+}
+
+.Emergente:hover, .Tabla_P th:hover{
+	background-color: #A0DED7;
+	transform: translateY(-2px);
+}
+
+.Bloque{
+	width: 5%;
+	text-align: center;
+	border: 2px solid;
+}
+
+.Img-emergente {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-left: 15px;
+    width: 170px;
+    background-color: rgb(190 190 189);
+    overflow: hidden;
+    z-index: 100;
+    transition: all 0.2s ease;
+	color: black;
+	text-align: center;
+}
+
+.Emergente:hover .Img-emergente {
+    display: block;
+}
+
+.Img-emergente img {
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+    display: block;
+}
+
+
+/*Páginas Individuales*/
+
+.boton-regresar{
+	border: 1px solid;
+	max-width: 15%;
+	text-align: center; 
+	border-radius: 5px;
+}
+
+.boton-regresar:hover{
+	transform: translateY(-5px);
+	background-color: #ABEBE5;
+}
+
+.boton-regresar a{
+	color: white;
+	text-decoration: none;
+	display: flex; 
+	justify-content: center;
+}
+
+.boton-regresar a:hover{
+	color: black;
+}
+
+.Lector embed{
+	margin: 20px 20px; 
+	display: flex;
+}
+
+.Cuerpo_1{
+	width:80%;
+	padding: 2% 1% 1% 5%;
+	color: #fff;
+}
+
+.Cuerpo_2{
+	width: 20%;
+	padding: 2% 8% 1% 1%;
+	position: absolute;
+	margin-left: 80%;
+}
+/*Menu costado derecho:Indice*/
+.Cuerpo_2 h1{
+	border: 2px solid #000;
+	margin-bottom: 10px;
+	text-align: center;
+	font-family: 'Dosis', sans-serif;
+	font-size: 15px;
+	background:linear-gradient(to top, #2f0404, #981717);
+	color: #adae92;
+}
+
+.Cuerpo_2 ul{
+	list-style: none; 
+	color: #fff;
+	font-family:'Dosis', sans-serif;
+	text-align: justify;
+	font-size: 15px;
+}
+.Cuerpo_2 li{
+	padding: 8px;
+	text-align: justify;
+}
+
+.Cuerpo_2 a{
+	color: snow;
+	text-decoration:none;
+	border: 2px solid #000;
+}
+
+
+.Cuerpo_2 li:hover{
+	cursor: pointer;
+	-webkit-text-stroke: 0.5px #000;
+	color: #fff;
+}
+
+
+/*Test*/
+
+.Plantilla-test{
+	align-items: center; 
+	height: auto;
+	margin: auto;
+}
+
+.Relaciones{
+	display: flex;
+}
+
+.Preguntas{
+	color: white;
+}
+
+.Opciones{
+	display: block;
+	color: white;
+	padding:15px;
+}
+
+.Pre-Abierta input{
+	width:200px;
+}
+
+.resaltado {
+     background-color: #ADD8E6;  /* Azul claro */
+     padding: 2px 4px;
+	 color: black;
+}
+
+form{
+	color: white;
+	display: flex;
+	margin: 10px;
+}
+
+form input{
+	margin-right:10px;
+	width:50px;
+}
+
+.Tabla9-def, .Tabla9-def td{
+	color: white;
+	border: 2px solid;
+	padding: 15px;
+	border-collapse: collapse;
+}
+
+.Tabla9-res, .Tabla9-res td{
+	color: white;
+	border: 2px solid;
+	padding: 3px;
+	border-collapse: collapse;
+}
+
+#FormularioExamen{
+	display: none;
+}
+
+#RespuestasPreguntas{
+	padding:15px;
+	color: white;
+}
+
+/* Estilos simples para el bloqueo */
+		.bloqueado {
+			pointer-events: none;
+			opacity: 0.5;
+			filter: grayscale(0.2);
+		}
+		.mensaje-bloqueo {
+			color: red;
+			font-weight: bold;
+			margin-top: 10px;
+			padding: 10px;
+			background: #ffeeee;
+			border: 2px solid red;
+			border-radius: 5px;
+			text-align: center;
+		}
+		#FormularioExamen {
+			transition: all 0.3s ease;
+		}
+
+/* Pie de pagina */
+.PiePagina{
+	background-color: black;
+	color: white;
+	padding:20px 60px 20px 60px;
+	display: flex;
+}
+
+.Autor{
+	display: flex;
+	width: 100%;
+	align-items:center;
+	justify-content: center;
+}
+
+.Redes{
+	margin-left: 70%;
+}
+
+.Redes-icon{
+	display: inline-block;
+	margin-left: 20px;
+	width: 60px;
+	height:60px;
+	border-radius: 50%;
+	text-align:center;
+	color: #fff;
+}
+
+.Redes-icon:hover{
+	background: #e2fdf5;
+	color: #000;
+}
+
+.Redes-icon i{
+	font-size: 30px;
+	line-height: 60px;
+}
+
+
+
